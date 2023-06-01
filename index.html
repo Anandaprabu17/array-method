@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border:2px solid black;
+            border-collapse: collapse;
+            text-align:center
+        }
+        td,th{
+            font-size: 17px;
+        }
+        table{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption style="font-size: large;font-weight: 900;">Array Methods</caption>
+        <tr>
+            <th>Method</th>
+            <th>Operation</th>
+            <th>Return Value</th>
+            <th>Example</th>
+            <th>Output</th>
+        </tr>
+        <tr>
+            <td>Push()</td>
+            <td>The method adds new items to the end of an array</td>
+            <td>Length of the array</td>
+            <td>
+                let arr=[43,57,23,87,98];<br>
+                document.write(arr);<br>
+                const b=arr.push(75,25,30);<br>
+                document.write(arr);<br>
+                document.write(b);
+            </td>
+            <td>arr=43,57,23,,87,98<br>
+              arr=43,57,23,87,98,75,25,30<br>
+              b=8
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let arr=[43,57,23,87,98];<br>
+                document.write(arr);<br>
+                const b=arr.push("7","hey");<br>
+                document.write(arr);<br>
+                document.write(b);
+            </td>
+            <td>
+                arr=43,57,23,87,98<br>
+                arr=43,57,23,87,98,7,hey<br>
+               b=7
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let arr=[43,57,23,87,98];<br>
+                document.write(arr);<br>
+                const b=arr.push("7");<br>
+                document.write(arr);<br>
+                document.write(b);
+            </td>
+            <td>
+                arr=43,57,23,87,98<br>
+                arr=43,57,23,87,98,7<br>
+               b=6
+            </td>
+        </tr>
+        <tr>
+            <td>unshift()</td>
+            <td>The methods adds new elements to the beginning of an array</td>
+            <td>length of an array</td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const v=a.unshift(12,23);<br>
+                document.write(a);<br>
+                document.write(b);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=12,23,23,78,54,12,98<br>
+                b=7
+            </td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const v=a.unshift("12","23","34");<br>
+                document.write(a);<br>
+                document.write(b);
+        </td>
+        <td>
+            a=23,78,54,12,98<br>
+            a=12,23,34,23,78,54,12,98<br>
+            b=7
+        </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const v=a.unshift("hey","world","hello");<br>
+                document.write(a);<br>
+                document.write(b); 
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=hey,world,hello,23,78,54,12,98<br>
+                b=8
+            </td>
+        </tr>
+        <tr>
+            <td>pop()</td>
+            <td>The method removes the last element of an array</td>
+            <td>the method returns removed element</td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const b=a.pop();<br>
+                const c=a.pop();<br>
+                document.write(a);<br>
+                document.write(b);<br>
+                document.write(c);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=23,78,54<br>
+                b=98<br>
+                c=12
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const b=a.pop();<br>
+                const c=a.pop("78");<br>
+                document.write(a);<br>
+                document.write(b);<br>
+                document.write(c); 
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=23,78,54<br>
+                b=98<br>
+                c=12
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const b=a.pop("12");<br>
+                document.write(a);<br>
+                document.write(b);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=23,78,54<br>
+                b=98
+            </td>
+        </tr>
+        <tr>
+            <td>shift()</td>
+            <td>The method removes the first item of an array</td>
+            <td>the method returns the removed element</td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const b=a.shift();<br>
+                document.write(a);<br>
+                document.write(b);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=78,54,12,98<br>
+                b=23
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let a=[23,78,54,12,78];<br>
+                document.write(a);<br>
+                const b=a.shift();<br>
+                const c=a.shift();<br>
+                document.write(a);<br>
+                document.write(b);<br>
+                document.write(c);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=54,12,98<br>
+                b=23<br>
+                c=78
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const b=a.shift();<br>
+                const c=a.shift();<br>
+                document.write(a);<br>
+                document.write(b);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=78,54,12,98<br>
+                b=23
+            </td>
+        </tr>
+        <tr>
+            <td>splice()</td>
+            <td>The method adds and/or removes array elements</td>
+            <td>the method returns removed element</td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const b=a.splice(2,1);<br>
+                document.write(a);<br>
+                document.write(b);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=23,78,12,98<br>
+                b=54
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const b=a.splice(3,2,"hai","bye");<br>
+                document.write(a);<br>
+                document.write(b);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=23,78,54,hai,bye<br>
+                b=12,98
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const b=a.splice(0,0,"hai","bye","you","me",5);<br>
+                const c=a.splice(5);<br>
+                document.write(a);<br>
+                document.writte(b);<br>
+                document.write(c);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=hai,bye,you,me,23<br>
+               c=78,54,12,98
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                let a=[23,78,54,12,98];<br>
+                document.write(a);<br>
+                const b=a.splice(3,-1);<br>
+                document.write(a);<br>
+                document.writte(b);
+            </td>
+            <td>
+                a=23,78,54,12,98<br>
+                a=23,78,54,12,98<br>
+            </td>
+        </tr>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[23,78,54,12,98];<br>
+            document.write(a);<br>
+            const b=a.splice(1);<br>
+            document.write(a);<br>
+            document.writte(b);
+        </td>
+        <td>
+            a=23,78,54,12,98<br>
+            a=23<br>
+            b=78,54,12,98
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[23,78,54,12,98,78,23];<br>
+            document.write(a);<br>
+            const b=a.splice(-4,2,"hey");<br>
+            document.write(a);<br>
+            document.writte(b);
+        </td>
+        <td>
+            a=23,78,54,12,98<br>
+            a=23,78,54,hey,hai,bye,78,23<br>
+            b=12,98
+        </td>
+    </tr>
+    <tr>
+        <td>slice()</td>
+        <td>The method selected elements in an array, as a new array.</td>
+        <td>selected elements in an array, as a new array.</td>
+        <td>
+            let a=[23,78,54,12,98,78,23];<br>
+            document.write(a);<br>
+            const b=a.slice(4,-1);<br>
+            document.write(a);<br>
+            document.write(b);
+        </td>
+        <td>
+            a=23,78,54,12,98,78,23<br>
+            a=23,78,54,12,98,78,23<br>
+            b=98,78
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+       <td></td>
+       <td>
+        let a=[23,78,54,12,98,78,23];<br>
+        document.write(a);<br>
+        const b=a.slice(4,-1);<br>
+        const c=a.slice(3,-1);<br>
+        document.write(a);<br>
+        document.write(b);<br>
+        document.write(c);
+    </td>
+    <td>
+        a=23,78,54,12,98,78,23<br>
+        a=23,78,54,12,98,78,23<br>
+        b=98,78<br>
+        c=12,98,78
+    </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+       <td></td>
+       <td>
+        let a=[23,78,54,12,98,78,23];<br>
+        document.write(a);<br>
+        const b=a.slice(4,-1);<br>
+        const c=a.slice(3,-1,"7");<br>
+        document.write(a);<br>
+        document.write(b);<br>
+        document.write(c);
+    </td>
+    <td>
+        a=23,78,54,12,98,78,23<br>
+        a=23,78,54,12,98,78,23<br>
+        b=98,78<br>
+        c=12,98,78
+    </td>
+    </tr>
+    <tr>
+        <td>concat()</td>
+        <td>The method concatenates two or more arrays</td>
+        <td>the method returns a new array,containing the joined arrays</td>
+        <td>
+            let a=[23,78,54,12];<br>
+            let b=[98,78,23];<br>
+            let c=[12,23,34];<br>
+            const d=a.concat(b,c);
+            document.write(a,b,c,d);
+        </td>
+        <td>
+            a=23,78,54,12<br>
+            b=98,78,23<br>
+            c=12,23,34<br>
+            d=23,78,54,12,98,78,12,23,34
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[23,78,54,12];<br>
+            let b=[98,78,23];<br>
+            let c=[12,23,34];<br>
+            const d=a.concat(a,a);
+            document.write(a,b,c,d);
+        </td>
+        <td>
+            a=23,78,54,12<br>
+            b=98,78,23<br>
+            c=12,23,34<br>
+            d=23,78,54,12,23,78,54,12,23,78,54,12
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[23,78,54,12];<br>
+            let b=[98,78,23];<br>
+            let c=[12,23,34];<br>
+            const d=a.concat(b,a);
+            document.write(a,b,c,d);
+        </td>
+        <td>
+            a=23,78,54,12<br>
+            b=98,78,23<br>
+            c=12,23,34<br>
+            d=23,78,54,12,98,78,23,23,78,54,12
+        </td>
+    </tr>
+    <tr>
+        <td>indexOf()</td>
+        <td>To find index number of the value</td>
+        <td>Index number</td>
+        <td>
+            let a=[12,23,34,45,56,67];<br>
+            const b=a.indexOf(56);<br>
+            document.write(a);<br>
+            document.write(b);
+        </td>
+        <td>
+           a= 12,23,34,45,56,67<br>
+            b=4
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[12,23,34,45,56,67];<br>
+            const b=a.indexOf(34,56);<br>
+            document.write(a);<br>
+            document.write(b);
+        </td>
+        <td>
+            a= 12,23,34,45,56,67<br>
+            b=-1
+        </td>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[12,2,34,45,56,67];<br>
+            const b=a.indexOf(2,0);<br>
+            document.write(a);<br>
+            document.write(b);
+        </td>
+        <td>
+            a= 12,23,34,45,56,67<br>
+            b=1
+        </td>
+    </tr>
+    <tr>
+        <td>includes()</td>
+        <td>The method determines whether an array includes a certain value among its entries, returning true or false as appropriate.</td>
+        <td>The method returns true if an array contains a specified value,otherwise the method returns false if the value is not found.</td>
+        <td>
+            let a=[12,23,34,45,56,67];<br>
+            const b=a.includes(34);<br>
+            document.write(a);<br>
+            document.write(b);
+        </td>
+        <td>
+            a=12,23,34,45,56,67<br>
+            b=true
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[12,23,34,45,56,67];<br>
+            const b=a.includes(4);<br>
+            document.write(a);<br>
+            document.write(b);
+        </td>
+        <td>
+            a=12,23,34,45,56,67<br>
+            b=false
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[12,23,34,45,56,67];<br>
+            const b=a.includes(4,34);<br>
+            document.write(a);<br>
+            document.write(b);
+        </td>
+        <td>
+            a=12,23,34,45,56,67<br>
+            b=false
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            let a=[12,23,34,45,56,67];<br>
+            const b=a.includes(23,34);<br>
+            document.write(a);<br>
+            document.write(b);
+        </td>
+        <td>
+            a=12,23,34,45,56,67<br>
+            b=false
+        </td>
+    </tr>
+    </table>
+</body>
+</html>
